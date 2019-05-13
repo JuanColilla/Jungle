@@ -1,52 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina6_1" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Jungle-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="JungleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Jungle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jungle2" translatesAutoresizingMaskIntoConstraints="NO" id="5uv-Ae-xGb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="hippo" translatesAutoresizingMaskIntoConstraints="NO" id="Z4i-uh-BV8">
+                                <rect key="frame" x="376" y="20" width="107" height="136"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="3Z3-qq-omD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="135" id="War-Ob-bXP"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yvu-zd-Oyg" appends="YES" id="szo-Hs-N1B"/>
+                                </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JwY-PV-QWJ">
-                                <rect key="frame" x="0.0" y="712" width="414" height="51"/>
+                                <rect key="frame" x="0.0" y="517" width="375" height="51"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boH-6L-w2R">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="51"/>
-                                        <color key="backgroundColor" red="0.99138995559999998" green="0.98232499569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="51"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
-                                        <state key="normal" title="PLAY"/>
+                                        <state key="normal" title="PLAY">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="actionButtons:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ea7-wt-pbr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yI4-so-9Tz">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="51"/>
-                                        <color key="backgroundColor" red="0.99138995559999998" green="0.98232499569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="125" y="0.0" width="125" height="51"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
-                                        <state key="normal" title="PAUSE"/>
+                                        <state key="normal" title="PAUSE">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="actionButtons:" destination="9pv-A4-QxB" eventType="touchUpInside" id="GTS-SF-9Ih"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ik3-mH-KH2">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="51"/>
-                                        <color key="backgroundColor" red="0.99138995559999998" green="0.98232499569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="250" y="0.0" width="125" height="51"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
-                                        <state key="normal" title="STOP"/>
+                                        <state key="normal" title="STOP">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="actionButtons:" destination="9pv-A4-QxB" eventType="touchUpInside" id="rQe-T4-rbo"/>
                                         </connections>
@@ -54,7 +72,7 @@
                                 </subviews>
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zka-dp-ae0">
-                                <rect key="frame" x="-2" y="771" width="418" height="31"/>
+                                <rect key="frame" x="-2" y="576" width="379" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.15133933429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="maximumTrackTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" red="0.99138995559999998" green="0.98232499569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,8 +80,49 @@
                                     <action selector="changeVolume:" destination="9pv-A4-QxB" eventType="valueChanged" id="XC7-5T-dTy"/>
                                 </connections>
                             </slider>
+                            <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="lion" translatesAutoresizingMaskIntoConstraints="NO" id="Vrh-Q7-VZq">
+                                <rect key="frame" x="196" y="265" width="118" height="136"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="SsM-U7-i9V"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="135" id="taO-zd-dPV"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qDV-em-0hp" appends="YES" id="w9y-vg-rin"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Speaker 1" translatesAutoresizingMaskIntoConstraints="NO" id="Dg0-Sg-grO">
+                                <rect key="frame" x="30" y="430" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="UOt-aP-Wmo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qCp-LH-VGA"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bird" translatesAutoresizingMaskIntoConstraints="NO" id="ZBr-4F-Y3Z">
+                                <rect key="frame" x="179" y="20" width="119" height="136"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="czj-V1-wIA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="135" id="w89-l1-Ltx"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Rht-OH-xJi" appends="YES" id="lEh-Il-x6Y"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="hyena" translatesAutoresizingMaskIntoConstraints="NO" id="fuM-KB-X12">
+                                <rect key="frame" x="30" y="20" width="120" height="135"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="H9y-9G-Zac"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="135" id="bSw-la-pqc"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tbG-UG-p9N" appends="YES" id="aVk-qt-xA9"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="JwY-PV-QWJ" secondAttribute="trailing" id="085-69-X8B"/>
                             <constraint firstItem="5uv-Ae-xGb" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="1WP-k6-cZR"/>
@@ -77,33 +136,72 @@
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Zka-dp-ae0" secondAttribute="trailing" id="xfi-gu-rvA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KZ7-yu-g9m" appends="YES" id="dfy-up-Wiu"/>
+                            <outletCollection property="gestureRecognizers" destination="r2D-8t-kZI" appends="YES" id="A85-i4-7s1"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Jungle" image="Jungle" selectedImage="Jungle" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="bird" destination="ZBr-4F-Y3Z" id="hvP-O1-Lty"/>
+                        <outlet property="hippo" destination="Z4i-uh-BV8" id="cgo-9O-a3p"/>
+                        <outlet property="hyena" destination="fuM-KB-X12" id="1lk-Cz-M2n"/>
+                        <outlet property="lion" destination="Vrh-Q7-VZq" id="uoH-Bj-DVx"/>
+                        <outlet property="speakerImageView" destination="Dg0-Sg-grO" id="ysA-Rq-fhY"/>
                         <outlet property="volumeSlider" destination="Zka-dp-ae0" id="sDS-g9-1aL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tbG-UG-p9N" userLabel="tapHyena">
+                    <connections>
+                        <action selector="tapGesture:" destination="9pv-A4-QxB" id="ZuU-8L-Prp"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="qDV-em-0hp" userLabel="tapLion">
+                    <connections>
+                        <action selector="tapGesture:" destination="9pv-A4-QxB" id="iyf-B8-ORZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Rht-OH-xJi" userLabel="tapBird">
+                    <connections>
+                        <action selector="tapGesture:" destination="9pv-A4-QxB" id="e6b-kq-qkd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yvu-zd-Oyg" userLabel="tapHippo">
+                    <connections>
+                        <action selector="tapGesture:" destination="9pv-A4-QxB" id="GnA-72-VLT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="KZ7-yu-g9m" userLabel="swipeDown">
+                    <connections>
+                        <action selector="swipeDown:" destination="9pv-A4-QxB" id="tdB-di-RYZ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="4" id="r2D-8t-kZI" userLabel="tapTwiceToRun">
+                    <connections>
+                        <action selector="tapTwiceToRun:" destination="9pv-A4-QxB" id="puS-g7-ESR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="749.27536231884062" y="-320.75892857142856"/>
+            <point key="canvasLocation" x="747.9760119940031" y="-322.39999999999998"/>
         </scene>
-        <!--Second-->
+        <!--Video-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="JungleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Jungle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="106.5" y="426.5" width="201.5" height="43"/>
+                                <rect key="frame" x="86.5" y="312" width="202" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="99.5" y="477.5" width="215" height="17"/>
+                                <rect key="frame" x="80" y="363" width="215" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -118,7 +216,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Video" image="Video" selectedImage="Video" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,10 +226,12 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.42066545049999998" blue="0.071768038000000006" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -144,8 +244,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="Jungle" width="25" height="28"/>
+        <image name="Speaker 1" width="119" height="116"/>
+        <image name="Video" width="25" height="18"/>
+        <image name="bird" width="405" height="361"/>
+        <image name="hippo" width="256" height="290"/>
+        <image name="hyena" width="400" height="437"/>
         <image name="jungle2" width="333" height="500"/>
-        <image name="second" width="30" height="30"/>
+        <image name="lion" width="1024" height="1087"/>
     </resources>
 </document>
