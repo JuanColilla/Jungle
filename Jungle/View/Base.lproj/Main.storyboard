@@ -110,7 +110,7 @@
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="hyena" translatesAutoresizingMaskIntoConstraints="NO" id="fuM-KB-X12">
-                                <rect key="frame" x="30" y="20" width="120" height="135"/>
+                                <rect key="frame" x="24" y="21" width="120" height="135"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="H9y-9G-Zac"/>

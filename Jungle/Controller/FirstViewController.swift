@@ -92,21 +92,25 @@ class FirstViewController: UIViewController {
             onDemandPath = URL(string: Bundle.main.path(forResource: "hyena", ofType: "mp3")!)
             onDemandAudioPlayer = try? AVAudioPlayer(contentsOf: onDemandPath!, fileTypeHint: nil)
             onDemandAudioPlayer?.prepareToPlay()
+            onDemandAudioPlayer?.setVolume(volumeSlider.value, fadeDuration: 0.1)
             onDemandAudioPlayer?.play()
         case 2:
             onDemandPath = URL(string: Bundle.main.path(forResource: "lion", ofType: "mp3")!)
             onDemandAudioPlayer = try? AVAudioPlayer(contentsOf: onDemandPath!, fileTypeHint: nil)
             onDemandAudioPlayer?.prepareToPlay()
+            onDemandAudioPlayer?.setVolume(volumeSlider.value, fadeDuration: 0.1)
             onDemandAudioPlayer?.play()
         case 3:
             onDemandPath = URL(string: Bundle.main.path(forResource: "bird", ofType: "mp3")!)
             onDemandAudioPlayer = try? AVAudioPlayer(contentsOf: onDemandPath!, fileTypeHint: nil)
             onDemandAudioPlayer?.prepareToPlay()
+            onDemandAudioPlayer?.setVolume(volumeSlider.value, fadeDuration: 0.1)
             onDemandAudioPlayer?.play()
         case 4:
             onDemandPath = URL(string: Bundle.main.path(forResource: "hippo", ofType: "mp3")!)
             onDemandAudioPlayer = try? AVAudioPlayer(contentsOf: onDemandPath!, fileTypeHint: nil)
             onDemandAudioPlayer?.prepareToPlay()
+            onDemandAudioPlayer?.setVolume(volumeSlider.value, fadeDuration: 0.1)
             onDemandAudioPlayer?.play()
         default:
             print("Nothing...")
