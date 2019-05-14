@@ -116,24 +116,26 @@ class FirstViewController: UIViewController {
     
     // LINKED TO ANIMATION
     func dropDown() {
-        let duration = 1.0
-        UIView.animate(withDuration: duration, animations: {
+        let duration = 0.75
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.hyena.center.y += 500
             self.lion.center.y += 500
             self.bird.center.y += 200
             self.hippo.center.y += 200
-        }, completion: { finnished in // HANDLE THIS NOT WORKING
-            self.hyena.center.y -= 500
-            self.lion.center.y -= 500
-            self.bird.center.y -= 200
-            self.hippo.center.y -= 200
-        })
+        }, completion: { if $0 == .end {
+            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+                self.hyena.center.y -= 500
+                self.lion.center.y -= 500
+                self.bird.center.y -= 200
+                self.hippo.center.y -= 200},
+            completion: nil)
+            }})
     }
 
 
     func runawayFromHere() {
         let duration = 0.75
-        UIView.animate(withDuration: duration, animations: {
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.hyena.center.y -= 400
             self.hyena.center.x -= 400
             self.lion.center.y -= 400
@@ -142,18 +144,18 @@ class FirstViewController: UIViewController {
             self.bird.center.x -= 400
             self.hippo.center.y += 400
             self.hippo.center.x += 400
-        }, completion: { finnished in // HANDLE THIS NOT WORKING
-            self.hyena.center.y += 400
-            self.hyena.center.x += 400
-            self.lion.center.y += 400
-            self.lion.center.x -= 400
-            self.bird.center.y -= 400
-            self.bird.center.x += 400
-            self.hippo.center.y -= 400
-            self.hippo.center.x -= 400
-        })
+        }, completion: { if $0 == .end {
+            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+                self.hyena.center.y += 400
+                self.hyena.center.x += 400
+                self.lion.center.y += 400
+                self.lion.center.x -= 400
+                self.bird.center.y -= 400
+                self.bird.center.x += 400
+                self.hippo.center.y -= 400
+                self.hippo.center.x -= 400},
+                                                           completion: nil)
+            }})
     }
 
-
 }
-
