@@ -25,14 +25,11 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        guard let path = Bundle.main.path(forResource: "jungle_music", ofType: "mp3") else { return }
-        
+      
         speakerImageView.image = UIImage.animatedImage(with: [UIImage(named: "Speaker 1"), UIImage(named: "Speaker 2"), UIImage(named: "Speaker 3"), UIImage(named: "Speaker 2"), UIImage(named: "Speaker 1")] as! [UIImage], duration: 1.5)
         
-        let url = URL(fileURLWithPath: path)
-        audioPlayer = try? AVAudioPlayer(contentsOf: url, fileTypeHint: nil)
+        let url = URL(string: Bundle.main.path(forResource: "jungle_music", ofType: "mp3")!)
+        audioPlayer = try? AVAudioPlayer(contentsOf: url!, fileTypeHint: nil)
         audioPlayer?.prepareToPlay()
         audioPlayer?.setVolume(volumeSlider.value, fadeDuration: 0.1)
         audioPlayer?.play()
